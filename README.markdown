@@ -4,8 +4,6 @@ Octopress provides [three ways](http://octopress.org/docs/deploying/) to deploy 
 
 Google App Engine supports to handle static files. However, unlike a traditional web hosting environment, Google App Engine does not serve static files directly unless [configured to do so](http://code.google.com/appengine/docs/python/gettingstarted/staticfiles.html). Thus, after creating an app to host an Octopress blog, we need to handle all requests to HTML pages, CSS stylesheets, JavaScript code, and etc., in `app.yaml`.
 
-{% include_code lang=yaml app.yaml %}
-
 To deploy an Octopress on Google App Engine, first [set up Octopress](http://octopress.org/docs/setup/). Then check out configuration file `app.yaml` from [my GitHub repository](https://github.com/relarge/octopress-gae) and put it into the Octopress directory.
 
 After writing [your first post](http://octopress.org/docs/blogging/), run `rake generate` to generate HTML pages and `app.cfg update [Octopress directory]` to deploy generated pages to App Engine.
